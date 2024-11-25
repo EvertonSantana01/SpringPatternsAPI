@@ -21,14 +21,14 @@ import one.digital.golf.service.ViaCepService;
 @Service
 public class ClienteServiceImpl implements ClienteService {
 	 
-	@Autowired //injeção
+	@Autowired
 	private ClienteRepository clienteRepository;
 	@Autowired
 	private EnderecoRepository enderecoRepository;
 	@Autowired
 	private ViaCepService viaCepService;
 
-	@Override   // sobrescrevendo um método existente
+	@Override
     public Iterable<Cliente> buscarTodos(){
         return clienteRepository.findAll();
     }
