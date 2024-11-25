@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @see <a href="https://spring.io/projects/spring-cloud-openfeign">Spring Cloud OpenFeing</a>
  * @see <a href="https://viacep.com.br">ViaCEP</a>
  */
-@FeignClient(name = "viacep", url ="https://viacep.com.br/ws")          // define um cliente Feign para consumir APIs externas
+@FeignClient(name = "viacep", url ="https://viacep.com.br/ws")
 public interface ViaCepService {
-    @GetMapping("/{cep}/json/")  // retorna o valor desejado 
-    Endereco consultarCep(@PathVariable("cep") String cep);  // captura o valor do CEP da URL e passa para o método.
+    @GetMapping("/{cep}/json/")
+    Endereco consultarCep(@PathVariable("cep") String cep);
 }
