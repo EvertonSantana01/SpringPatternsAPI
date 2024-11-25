@@ -6,15 +6,15 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
 
-@Entity    //essa classe vai virar uma tabela no banco de dados, e cada objeto é uma linha dessa tabela
+@Entity
 public class Cliente {
 
-    @Id // unico para cada linha
-    @GeneratedValue(strategy = GenerationType.AUTO) // O banco ou JPA cria o valor automaticamente.
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nome;
     
-    @ManyToOne   // Muitos para um
+    @ManyToOne
     private Endereco endereco;
 
     public Long getId() {
